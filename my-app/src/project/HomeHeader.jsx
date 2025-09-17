@@ -6,7 +6,7 @@ function HomeHeader() {
       className="banner-serction jumbotron-fluid position-relative overlay-bottom"
       style={{height: "100vh" }}
     >
-      <div className="container text-center"style={{position:"absolute",top:"40%",right:"0"}}>
+      <div className="text-center"style={{position:"absolute",top:"40%",right:"0"}}>
         <h1 className="text-white"style={{fontSize:"60px"}}>Welcome To KK Blossoms</h1>
         <p class="home-desc">
           
