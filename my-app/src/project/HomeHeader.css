@@ -1,0 +1,63 @@
+.banner-serction {
+    background: linear-gradient(rgba(104, 161, 241, 0.95), rgba(93, 135, 194, 40%)), url("./photos/Background-Img.PNG"), no-repeat center center;
+    background-size: cover;
+    margin-bottom: 60px;
+}
+.home-desc{
+  color: #ffff;
+  font-size: 1.3rem;
+}
+
+/* Responsive font sizes */
+@media (max-width: 992px) {
+  .banner-serction h1 {
+    font-size: 40px !important;
+  }
+  .home-desc {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-serction h1 {
+    font-size: 28px !important;
+  }
+  .home-desc {
+    font-size: 0.95rem !important;
+  }
+}
+/* Tablet */
+@media (max-width: 992px) {
+  .banner-serction .container {
+    top: 30% !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 676px) {
+  .banner-serction {
+    min-height: 200px;
+    padding: 30px 10px;
+    background-size: cover;
+    background-position: top;
+  }
+}
+/* Tablet */
+@media (max-width: 992px) {
+  .banner-section {
+    min-height: 300px;
+    padding: 40px 15px;
+    background-position: center top;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .banner-section {
+    min-height: 250px;
+    padding: 30px 10px;
+    background-position: top;
+  }
+}

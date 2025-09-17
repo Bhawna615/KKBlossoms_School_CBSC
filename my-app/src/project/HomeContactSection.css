@@ -1,0 +1,37 @@
+/* Responsive styles for HomeContactSection */
+@media (max-width: 992px) {
+  .contact-info-col,
+  .contact-form-col {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .contact-info-col {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid,
+  .container {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .contact-info-col {
+    margin-bottom: 15px !important;
+  }
+  .contact-form-col {
+    margin-top: 0 !important;
+  }
+  .section-title h1,
+  .section-title h6 {
+    text-align: center !important;
+  }
+  .contact-form {
+    padding: 0 !important;
+  }
+  .btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}

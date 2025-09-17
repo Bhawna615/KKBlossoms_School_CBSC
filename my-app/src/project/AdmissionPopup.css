@@ -1,0 +1,423 @@
+.admissions-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px;
+}
+
+.admissions-popup-container {
+  width: 880px;
+  height: 800px;
+  max-width: 100vw;
+  max-height: 95vh;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 6px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.close-button:hover {
+  transform: scale(1.1);
+}
+
+.admissions-content-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 992px) {
+  .admissions-popup-container {
+    width: 98vw;
+    height: auto;
+    min-height: 600px;
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 98vh;
+    overflow-y: auto;
+  }
+  .admissions-content-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  .admissions-visual,
+  .admissions-details {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: none;
+    margin: 0 auto;
+  }
+  .admissions-images-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .popup-img,
+  .group-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 576px) {
+  .admissions-popup-container {
+    width: 100vw;
+    min-width: 0;
+    height: auto;
+    min-height: 400px;
+    flex-direction: column;
+    max-width: 100vw;
+    max-height: 98vh;
+    overflow-y: auto;
+    padding: 0;
+  }
+  .admissions-content-wrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 0 2vw;
+  }
+  .admissions-visual,
+  .admissions-details {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .admissions-images-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+  .popup-img,
+  .group-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  .admissions-title {
+    font-size: 1.2rem !important;
+    text-align: center;
+  }
+  .admissions-description {
+    font-size: 0.95rem !important;
+    text-align: center;
+  }
+  .features-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .feature-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .apply-button {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  .limited-seats {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+
+.admissions-visual {
+  flex: 1;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1549419137-331500000_100') no-repeat center center/cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.admissions-images-section {
+  position: relative;
+  bottom: 12%;
+  right: 16%;
+  z-index: 3;
+}
+
+.popup-img-container,
+.group-img-container {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.popup-img {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.group-img {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.group-img-container {
+  position: absolute;
+  top: 100%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
+.admissions-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #007bff, #4b9bf1);
+  z-index: 1;
+}
+
+.admissions-branding,
+.admissions-contact {
+  position: relative;
+  z-index: 2;
+}
+
+.admissions-branding h2 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.tagline {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.admissions-contact h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.phone-number {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.admissions-details {
+  flex: 1;
+  padding: 30px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.admissions-title {
+   white-space: nowrap;      /* prevents line breaks */
+  overflow: hidden;         /* hides extra text if it's too long */
+  text-overflow: ellipsis;
+  color: #007bff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.admissions-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  color: #007bff;
+  flex-shrink: 0;
+}
+
+.feature-text h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.feature-text p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+.apply-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.apply-button:hover {
+  background: #0056cc;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.limited-seats {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+
+/* 📱 Tablet adjustments */
+@media (max-width: 992px) {
+  .admissions-popup-container {
+    width: 95vw;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .admissions-content-wrapper {
+    flex-direction: column;
+  }
+
+  .admissions-visual,
+  .admissions-details {
+    height: auto;
+    padding: 25px;
+  }
+
+  .admissions-images-section {
+    bottom: auto;
+    right: auto;
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .popup-img,
+  .group-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .group-img-container {
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+
+  .admissions-branding h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Make fonts and images shrink proportionally */
+@media (max-width: 768px) {
+  .admissions-popup-container {
+    width: 95vw;
+    height: 95vw; /* keep square */
+  }
+
+  .admissions-title {
+    font-size: 1.4rem;
+  }
+
+  .admissions-description {
+    font-size: 0.9rem;
+  }
+
+  .popup-img,
+  .group-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admissions-popup-container {
+    width: 95vw;
+    height: 95vw;
+  }
+
+  .admissions-title {
+    font-size: 1.2rem;
+  }
+
+  .admissions-description {
+    font-size: 0.8rem;
+  }
+
+  .popup-img,
+  .group-img {
+    width: 100px;
+    height: 100px;
+  }
+}

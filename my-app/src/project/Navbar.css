@@ -1,0 +1,82 @@
+/* Main container */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Navbar styles */
+.navbar {
+  
+  padding: 12px 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Logo */
+.school-logo {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 15px;
+  color: #333 !important;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2878eb !important;
+}
+
+/* Contact button */
+.contact-btn {
+  border-radius: 10px;
+  padding: 8px 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ✅ Smooth collapse animation */
+.collapse:not(.show) {
+  display: block;         /* keep block so we can animate */
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease;
+}
+
+.collapse.show {
+  height: auto;
+  transition: height 0.4s ease;
+}
+
+/* Responsive - Mobile */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .contact-btn {
+    display: block !important;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
+
+ @media (max-width: 576px) {
+  .header-bottom {
+    padding:0px 15px;
+  }
+}
+    

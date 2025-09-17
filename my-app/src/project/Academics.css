@@ -1,0 +1,244 @@
+.academic-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 150px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  background: #f9f9fb;
+}
+
+/* Hero Section */
+.academic-hero {
+  position: relative;
+  height: 350px;
+  background: linear-gradient(rgba(119, 157, 228, 0.6)),
+    url("./photos/School-group-img.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 120px 20px;
+  border-radius: 16px;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  animation: fadeInHero 1.2s ease-in-out;
+}
+
+.academic-hero h1 {
+    color: #fff;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  animation: slideInDown 1s ease-in-out;
+}
+
+.academic-hero p {
+  font-size: 1.3rem;
+  max-width: 750px;
+  margin: 0 auto;
+  opacity: 0.95;
+  line-height: 1.8;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Tabs Section */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  background: #eaeef7;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.4s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs button.active {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+.tabs button:hover {
+  background: linear-gradient(135deg, #0056b3, #0096c7);
+  color: white;
+}
+
+.sub-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Tab Content */
+.tab-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 40px;
+  max-width: 850px;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.tab-content h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #007bff;
+}
+
+.tab-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tab-img {
+  width: 40%;
+  max-height: 220px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-top: 50px;
+  text-align: left;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.faq-item {
+  background: #ffffff;
+  padding: 18px 20px;
+  margin: 12px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.faq-item:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.faq-item h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.faq-item.open {
+  background: #f1f7ff;
+  border-left: 5px solid #007bff;
+  transform: translateY(-3px);
+}
+
+.faq-item p {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .tab-item {
+    flex-direction: column;
+  }
+  .tab-img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .academic-hero {
+    height: auto;
+    padding: 80px 15px;
+  }
+  .academic-hero h1 {
+    font-size: 2.2rem;
+  }
+  .academic-hero p {
+    font-size: 1rem;
+  }
+  .tab-content,
+  .faq-section {
+    padding: 20px;
+  }
+  .tab-img {
+    width: 100%;
+  }
+
+  .academic-hero {
+    padding-top: 60px;
+  
+}
+.academic-container {
+    width: 95%;
+    padding-top: 250px;
+  }
+}

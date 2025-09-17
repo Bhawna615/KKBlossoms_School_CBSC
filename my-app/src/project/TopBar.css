@@ -1,0 +1,94 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 12px px;
+  font-size: 14px;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topbar-left .divider {
+  margin: 0 6px;
+}
+
+.email-link {
+  color: white;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.topbar-right .social {
+  color: white;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.topbar-right .social:hover {
+  color: #0d6efd; /* blue hover */
+}
+
+/* 📱 For most Android phones (360px–414px) */
+@media (max-width: 480px) {
+  .topbar-left {
+    flex-direction: row;
+    flex-wrap: nowrap;
+   
+  }
+  .topbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 8px;
+  }
+  .topbar-left {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .topbar-right {
+    margin-top: 2px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 8px 6px;
+  }
+  .topbar-left {
+    justify-content: center;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .topbar-right {
+    justify-content: center;
+    margin-top: 4px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .email-link {
+    font-size: 13px;
+    word-break: break-word;
+  }
+  
+}
+
+ 

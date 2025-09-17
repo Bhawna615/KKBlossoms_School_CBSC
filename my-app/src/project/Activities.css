@@ -1,0 +1,199 @@
+.activities-container {
+  font-family: "Poppins", sans-serif;
+  padding-top: 150px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Hero Section */
+.activities-hero {
+  position: relative;
+  background: linear-gradient(rgba(119, 157, 228, 0.6)),
+    url("./photos/Sport-img.webp") center/cover no-repeat;
+  color: white;
+  padding: 60px 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  height: 350px;
+}
+
+.hero-container {
+  position: absolute;
+  top: 35%;
+  left: 12%;
+}
+
+.activities-hero h1 {
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.activities-hero p {
+  font-size: 1.2rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tabs button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 30px;
+  background: #f1f1f1;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 16px;
+}
+
+.tabs button.active {
+  background: #007bff;
+  color: white;
+  transform: scale(1.08);
+}
+
+.tabs button:hover {
+  background: #0056b3;
+  color: white;
+}
+
+.sub-title {
+  text-align: center;
+}
+
+/* Tab Content */
+.tab-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 50px auto;
+  max-width: 900px;
+}
+
+.tab-content h2 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.tab-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.tab-content img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* Gallery */
+.gallery {
+  margin-top: 40px;
+}
+
+.gallery h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #007bff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* Tab item flex for images/text */
+.tab-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab-item img {
+  width: 45%;
+  max-height: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .tab-item img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .activities-container {
+    width: 95%;
+    padding-top: 250px;
+  }
+
+  .activities-hero {
+    height: auto;
+    padding: 40px 15px;
+  }
+
+  .hero-container {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .activities-hero h1 {
+    font-size: 2rem;
+  }
+
+  .activities-hero p {
+    font-size: 1rem;
+  }
+
+  .tabs button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tab-content {
+    padding: 20px;
+  }
+
+  .tab-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tab-item img {
+    width: 100%;
+  }
+}
