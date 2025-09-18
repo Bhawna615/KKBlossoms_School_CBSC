@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import schoolLogo from "./photos/K-K-Blossoms-School-png.webp"; // adjust path as per your structure
 import TopBar from "./TopbarStart";
-import { BsDisplay } from "react-icons/bs";
+import "./Navbar.css";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,15 +25,15 @@ function Navbar() {
         style={{
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px", // ✅ smooth shadow
         }}>
-        <div class="header-bottom" style={{display:"contents"}}>
+        <div class="header-bottom" style={{display:"flex", justifyContent:"space-between" ,alignItems:"center" ,width:"100%"}} >
           {/* Brand Logo */}
-          <a href="/" className="navbar-brand ml-lg-3 align-items-center">
+          <a href="/" className="navbar-brand ml-lg-3" style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
             <img
               src={schoolLogo}
               alt="KK Blossoms School"
-              style={{ height: "50px", width: "50px", marginRight: "10px" }}
+              style={{ height: "40px", width: "40px", marginRight: "10px" }}
             />
-            <h1 className="m-0 text-uppercase text-primary">KK Blossoms</h1>
+            <h4 className="m-0 text-uppercase text-primary">KK Blossoms</h4>
           </a>
 
           {/* Toggler for mobile */}
@@ -51,7 +51,7 @@ function Navbar() {
           {/* Navbar Links */}
           <nav>
             <div
-              className={`collapse navbar-collapse justify-content-between px-lg-3${isOpen ? " show" : ""}`}
+              className={`collapse navbar-collapse  px-lg-3 ${isOpen ? " show" : ""}`}
               id="navbarCollapse"
             >
               <div className="navbar-nav mx-auto py-0">
