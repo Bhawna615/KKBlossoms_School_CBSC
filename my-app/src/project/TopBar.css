@@ -12,8 +12,7 @@
 .topbar-left {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
+  
 }
 
 .topbar-left .divider {
@@ -43,52 +42,36 @@
 }
 
 /* 📱 For most Android phones (360px–414px) */
-@media (max-width: 480px) {
-  .topbar-left {
-    flex-direction: row;
-    flex-wrap: nowrap;
-   
-  }
-  .topbar-container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 8px 8px;
-  }
-  .topbar-left {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 4px;
-  }
-  .topbar-right {
-    margin-top: 2px;
-    justify-content: flex-start;
-  }
-}
+
 
 @media (max-width: 768px) {
-  .topbar {
-    flex-direction: column;
+  .topbar-container{
+    padding: 10px !important;
+    
+  }
+  .topbar-right .social {
+    font-size: 0.6rem;
+  }
+  .topbar{
+    font-size: 0.7rem;
+  }
+  /* .topbar {
     text-align: center;
     padding: 8px 6px;
-  }
-  .topbar-left {
+  } */
+  /* .topbar-left {
     justify-content: center;
     margin-bottom: 6px;
     flex-wrap: wrap;
     gap: 6px;
-  }
-  .topbar-right {
+  } */
+  /* .topbar-right {
     justify-content: center;
     margin-top: 4px;
     gap: 10px;
     flex-wrap: wrap;
-  }
-  .email-link {
-    font-size: 13px;
-    word-break: break-word;
-  }
-  
+  } */
+
 }
 
  
