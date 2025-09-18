@@ -13,12 +13,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-/* Logo */
-.school-logo {
-  height: 50px;
-  width: 50px;
-  margin-right: 10px;
-}
+
 
 /* Nav links */
 .navbar-nav .nav-link {
@@ -41,22 +36,20 @@
   font-weight: 600;
 }
 
-/* ✅ Smooth collapse animation */
 .collapse:not(.show) {
-  display: block;         /* keep block so we can animate */
-  height: 0;
-  overflow: hidden;
-  transition: height 0.4s ease;
+  display: block;
 }
-
-.collapse.show {
-  height: auto;
-  transition: height 0.4s ease;
+.school-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
+ .header-bottom{
+   justify-content: space-between;
+}
 /* Responsive - Mobile */
-@media (max-width: 992px) {
-  .navbar-nav {
+@media (max-width: 768px) {
+  /* .navbar-nav {
     text-align: center;
     padding: 15px 0;
   }
@@ -65,18 +58,59 @@
     display: block;
     padding: 10px;
     font-size: 18px;
-  }
+  } */
 
   .contact-btn {
     display: block !important;
     margin: 10px auto;
     text-align: center;
   }
-}
+  .navbar-brand {
+    display: flex !important;
+  }
+  .header-bottom{
+     padding: 10px 0px !important;
+     position: relative;
+     display: flex;
+  }
 
- @media (max-width: 576px) {
-  .header-bottom {
-    padding:0px 15px;
+  .navbar-toggler {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+  }
+
+}
+@media (max-width: 768px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;       /* place menu below navbar */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding: 10px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    width: 100%;
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* ensure contact button also stacks */
+  .contact-btn {
+    display: block !important;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
   }
 }
-    
