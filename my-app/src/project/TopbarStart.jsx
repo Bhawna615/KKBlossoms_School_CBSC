@@ -19,6 +19,15 @@ function TopBar() {
             blossomsactivity.sol@gmail.com
           </a>
         </div>
+        {/* <div>
+          <a
+            href="mailto:blossomsactivity.sol@gmail.com"
+            className="email-link"
+          >
+            <i className="fa fa-envelope mr-2"></i>
+            blossomsactivity.sol@gmail.com
+          </a>
+        </div> */}
 
         <div className="topbar-right">
           <a className="social" href="https://www.facebook.com/KKBHSS/">
